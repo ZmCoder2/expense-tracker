@@ -1,9 +1,11 @@
 import { Button, Stack } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import BudgetCard from "./components/BudgetCard";
+import AddBudgetModal from "./components/addBudgetModal";
 
 function App() {
   return (
+    <>
     <Container className="my-4">
       {/* This className give us margin spacing from the top for the header and buttons */}
       <Stack direction="horizontal" gap="2" className="mb-4">
@@ -23,7 +25,8 @@ function App() {
         <BudgetCard name="Entertainment" gray amount={100} max={1000} />
       </div>
     </Container>
-  );
-}
+    <AddBudgetModal show />
+    </>
+)}
 
 export default App;
